@@ -22,15 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       # All CRs workflows require the 'crs' tool, so you are going to need this
       # no matter which workflow you use.
 
       - name: Install crs
-        uses: mbarbin/crs-actions/setup-crs@v1.0.0-alpha.8
+        uses: mbarbin/crs-actions/setup-crs@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
         with:
-          crs-version: 0.0.20250813
+          crs-version: 0.0.20251014
+          crs-digest: sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6
 
       # If you choose a workflow that requires `reviewdog`, you'll need to set
       # it up too. The distribution includes an shared action for this:
@@ -44,7 +45,7 @@ jobs:
       # requires: crs, reviewdog
       #
       # - name: Comment on CRs in PR
-      #   uses: mbarbin/crs-actions/comment-crs-in-pr@v1.0.0-alpha.8
+      #   uses: mbarbin/crs-actions/comment-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
       #   with:
       #     crs-config: .github/crs-config.json
 
@@ -52,7 +53,7 @@ jobs:
       # requires: crs
       #
       # - name: Annotate CRs in PR
-      #   uses: mbarbin/crs-actions/annotate-crs-in-pr@v1.0.0-alpha.8
+      #   uses: mbarbin/crs-actions/annotate-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
       #   with:
       #     crs-config: .github/crs-config.json
 
@@ -60,7 +61,7 @@ jobs:
       # requires: crs, reviewdog
       #
       # - name: Create CRs PR Check
-      #   uses: mbarbin/crs-actions/create-crs-pr-check@v1.0.0-alpha.8
+      #   uses: mbarbin/crs-actions/create-crs-pr-check@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
       #   with:
       #     crs-config: .github/crs-config.json
 
@@ -68,7 +69,7 @@ jobs:
       # requires: crs
       #
       # - name: Create CRs PR Job Summary
-      #   uses: mbarbin/crs-actions/create-crs-pr-job-summary@v1.0.0-alpha.8
+      #   uses: mbarbin/crs-actions/create-crs-pr-job-summary@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
       #   with:
       #     crs-config: .github/crs-config.json
 
@@ -76,7 +77,7 @@ jobs:
       # requires: crs
       #
       # - name: Summarize CRs in PR
-      #   uses: mbarbin/crs-actions/summarize-crs-in-pr@v1.0.0-alpha.8
+      #   uses: mbarbin/crs-actions/summarize-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
       #   with:
       #     crs-config: .github/crs-config.json
 
