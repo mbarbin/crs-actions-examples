@@ -40,11 +40,13 @@ jobs:
       # All CRs workflows require the 'crs' tool, so you are going to need this
       # no matter which workflow you use.
       #
+      # In this PR we test the action when supplied an invalid sha (Do Not Merge!).
+      #
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
         with:
           crs-version: 0.0.20251014
-          crs-digest: sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6
+          crs-digest: sha256:0000xxxxa2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001xxxx0000
 
       # If you choose a workflow that requires `reviewdog`, you'll need to set
       # it up too. The distribution includes an shared action for this:
