@@ -39,7 +39,7 @@ jobs:
 
       # All CRs workflows require the 'crs' tool, so you are going to need this
       # no matter which workflow you use.
-
+      #
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
         with:
@@ -48,7 +48,7 @@ jobs:
 
       # If you choose a workflow that requires `reviewdog`, you'll need to set
       # it up too. The distribution includes an shared action for this:
-
+      #
       - name: Install reviewdog
         if: env.INSTALL_REVIEWDOG == 'true'
         uses: reviewdog/action-setup@d8edfce3dd5e1ec6978745e801f9c50b5ef80252 # v1.4.0
@@ -57,7 +57,7 @@ jobs:
 
       # Comment on CRs in PR
       # requires: crs, reviewdog, pull-requests: write
-
+      #
       - name: Comment on CRs in PR
         if: env.RUN_COMMENT_CRS_IN_PR == 'true'
         uses: mbarbin/crs-actions/comment-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
@@ -66,7 +66,7 @@ jobs:
 
       # Annotate CRs in PR
       # requires: crs
-
+      #
       - name: Annotate CRs in PR
         if: env.RUN_ANNOTATE_CRS_IN_PR == 'true'
         uses: mbarbin/crs-actions/annotate-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
@@ -75,7 +75,7 @@ jobs:
 
       # Create CRs PR Check
       # requires: crs, reviewdog
-
+      #
       - name: Create CRs PR Check
         if: env.RUN_CREATE_CRS_PR_CHECK == 'true'
         uses: mbarbin/crs-actions/create-crs-pr-check@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
@@ -84,7 +84,7 @@ jobs:
 
       # Create CRs PR Job Summary
       # requires: crs
-
+      #
       - name: Create CRs PR Job Summary
         if: env.RUN_CREATE_CRS_PR_JOB_SUMMARY == 'true'
         uses: mbarbin/crs-actions/create-crs-pr-job-summary@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
@@ -93,7 +93,7 @@ jobs:
 
       # Summarize CRs in PR
       # requires: crs, pull-requests: write
-
+      #
       - name: Summarize CRs in PR
         if: env.RUN_SUMMARIZE_CRS_IN_PR == 'true'
         uses: mbarbin/crs-actions/summarize-crs-in-pr@061f8bc6ac432c1ebc575489f0ea1bc499be0e78 # v1.0.0-alpha.10
