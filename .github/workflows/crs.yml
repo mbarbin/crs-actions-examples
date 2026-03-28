@@ -11,7 +11,7 @@ on:
 # =============================================================================
 env:
   INSTALL_REVIEWDOG: "false"
-  RUN_ANNOTATE_CRS_IN_PR: "false"
+  RUN_ANNOTATE_CRS_IN_PR: "true"
   RUN_COMMENT_CRS_IN_PR: "false"
   RUN_CREATE_CRS_PR_CHECK: "false"
   RUN_CREATE_CRS_PR_JOB_SUMMARY: "false"
