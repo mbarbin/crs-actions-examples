@@ -15,7 +15,7 @@ env:
   RUN_COMMENT_CRS_IN_PR: "false"
   RUN_CREATE_CRS_PR_CHECK: "false"
   RUN_CREATE_CRS_PR_JOB_SUMMARY: "false"
-  RUN_SUMMARIZE_CRS_IN_PR: "false"
+  RUN_SUMMARIZE_CRS_IN_PR: "true"
 # =============================================================================
 
 permissions:
@@ -27,7 +27,7 @@ permissions:
   # the workflows you use. Here we add more permissions in each PR depending on
   # the requirements.
   contents: read
-  pull-requests: read
+  pull-requests: write
 
 jobs:
   crs-workflows:
